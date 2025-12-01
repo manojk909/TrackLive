@@ -87,10 +87,10 @@ http://localhost:3000
 ## 🖥️ Screenshots
 
 ### 📍 Live Map View
-![Screenshot 01](assets/Screenshot 01.png)
+![Screenshot 01](assets/Screenshot_01.png)
 
 ### 📡 Real-time Tracking
-![Screenshot 02](assets/Screenshot 02.png)
+![Screenshot 02](assets/Screenshot_02.png)
 
 ---
 
