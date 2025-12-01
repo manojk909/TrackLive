@@ -1,10 +1,10 @@
 const socket = io();
 
-if (navigator.geolocation) {
+if (navigator.geolocation){
     navigator.geolocation.watchPosition(
         (position) => {
-            const { latitide, longitude } = position.coords;
-            socket.emit("send-location", { latitide, longitude });
+            const { latitude, longitude } = position.coords;
+            socket.emit("send-location", { latitude, longitude });
         },
         (error) => {
             console.error(error);
@@ -17,8 +17,10 @@ if (navigator.geolocation) {
     )
 }
 
-L.map("map").setView([0, 0], 10);
+const map = L.map("map").setView([0, 0], 10);
 
-L.tileLayer("https://{s}.tileopenstreetmao.org/{z}/{x}/{y}.png", {
-    attrbution: "OPenStreetMap"
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "OpenStreetMap"
 }).addTo(map)
+
+const markers = {}
